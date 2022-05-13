@@ -38,22 +38,17 @@ for us to test run the APIs
 $ git clone https://github.com/annaaz/sequis-api-task.git
 ```
 
-2. Enter folder
-```
-$ cd laravel-api
-```
-
-3. Install composer dependencies
+2. Install composer dependencies
 ```
 ~/laravel-api$ composer install
 ```
 
-4. Generate APP_KEY
+3. Generate APP_KEY
 ```
 ~/laravel-api$ php artisan key:generate
 ```
 
-5. Configure .env file, edit file with next command `$ nano .env`
+4. Configure .env file, edit file with next command `$ nano .env`
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -63,7 +58,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-6. Run migrations
+5. Run migrations
 ```
 ~/laravel-api$ php artisan migrate
 ```
