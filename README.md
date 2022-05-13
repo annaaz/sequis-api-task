@@ -1,4 +1,4 @@
-<p align="center"><img src="https://www.bisnisjakarta.co.id/wp-content/uploads/2017/08/IMG_20170817_170254.jpg"></p>
+<p align="center"><img width='230px' src="https://www.bisnisjakarta.co.id/wp-content/uploads/2017/08/IMG_20170817_170254.jpg"></p>
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 
