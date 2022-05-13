@@ -31,10 +31,52 @@ for us to test run the APIs
 
 ### Basic Installation
 
+### Installation
+
 1. Clone repository
+```
+$ git clone https://github.com/santoshnet/laravel-api.git
+```
+
+2. Enter folder
+```
+$ cd laravel-api
+```
+
+3. Install composer dependencies
+```
+~/laravel-api$ composer install
+```
+
+4. Generate APP_KEY
+```
+~/laravel-api$ php artisan key:generate
+```
+
+5. Configure .env file, edit file with next command `$ nano .env`
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=database
+DB_USERNAME=user
+DB_PASSWORD=secret
+```
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=mymail@gmail.com
+MAIL_PASSWORD=secret
+MAIL_ENCRYPTION=TLS
+
+
+6. Run migrations
 ```
 ~/laravel-api$ php artisan migrate
 ```
+
+
 ### Documentation And Routes
 
 ##### List API 
