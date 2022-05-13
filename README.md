@@ -35,7 +35,7 @@ for us to test run the APIs
 
 1. Clone repository
 ```
-$ git clone https://github.com/santoshnet/laravel-api.git
+$ git clone https://github.com/annaaz/sequis-api-task.git
 ```
 
 2. Enter folder
@@ -58,24 +58,15 @@ $ cd laravel-api
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=database
-DB_USERNAME=user
-DB_PASSWORD=secret
+DB_DATABASE=homestead
+DB_USERNAME=root
+DB_PASSWORD=
 ```
-
-MAIL_DRIVER=smtp
-MAIL_HOST=smtp.gmail.com
-MAIL_PORT=587
-MAIL_USERNAME=mymail@gmail.com
-MAIL_PASSWORD=secret
-MAIL_ENCRYPTION=TLS
-
 
 6. Run migrations
 ```
 ~/laravel-api$ php artisan migrate
 ```
-
 
 ### Documentation And Routes
 
@@ -148,9 +139,8 @@ MAIL_ENCRYPTION=TLS
     Validate if mail exist 
     
    Form Parameter : 
-   
+
    request_for{mail}
-   
   
 ```
 <strong>Success Request </strong>
@@ -174,9 +164,8 @@ MAIL_ENCRYPTION=TLS
     Validate if mail exist 
     
    Form Parameter : 
-   
+ 
    email{mail}
-   
   
 ```
 ![image](https://user-images.githubusercontent.com/25476195/168036041-e82c138f-ee73-4dad-aebe-1f8ecac94bcf.png)
@@ -196,12 +185,9 @@ MAIL_ENCRYPTION=TLS
     Validate if mail exist 
     
    Form Parameter : 
-   
    email{mail}
    
-  
 ```
-
 ![image](https://user-images.githubusercontent.com/25476195/168036327-c4d1cf02-c784-4c3d-845e-65fa29b13510.png)
 
 ![image](https://user-images.githubusercontent.com/25476195/168036532-8ea928da-8c9c-4e56-b69d-eb17abde4545.png)
