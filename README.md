@@ -27,7 +27,7 @@ for us to test run the APIs
 
 - [Basic Installation](#installation)
 - [Docker Installation](#installation)
-- [Routes](#routes) and Documentations
+- [Documentations and Routes](#routes)  
 
 ### Basic Installation
 
