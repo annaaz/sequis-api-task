@@ -67,7 +67,7 @@ DB_PASSWORD=
 ```
 ~/laravel-api$ php artisan migrate
 ```
-
+### Routes
 ### Documentation And Routes
 
 ##### List API 
