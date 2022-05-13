@@ -38,7 +38,7 @@ for us to test run the APIs
 ### Documentation And Routes
 
 ##### List API 
-<strong>Ask Request </strong>
+<strong>1. Handle Ask Request </strong>
 ```
 - POST ::  /api/ask-request
   
@@ -69,7 +69,7 @@ for us to test run the APIs
 <hr />
 
 
-<strong>Manage Request </strong>
+<strong>2. Handle Manage Request </strong>
 ```
 - POST ::  /api/manage-request
   
@@ -95,7 +95,7 @@ for us to test run the APIs
 
 <hr />
 
-<strong>List All Request </strong>
+<strong>3.Handle List All Request </strong>
 ```
 - POST ::  /api/list-request
   
@@ -121,7 +121,7 @@ for us to test run the APIs
 
 <hr />
 
-<strong>List Friends </strong>
+<strong>4. List Friends </strong>
 ```
 - POST ::  /api/list-friends
   
@@ -142,7 +142,7 @@ for us to test run the APIs
 <hr />
 
 
-<strong>List retrieve between two mails </strong>
+<strong>5. List retrieve between two mails </strong>
 ```
 - POST ::  /api/retrieve-friends
   
@@ -166,7 +166,7 @@ for us to test run the APIs
 
 <hr />
 
-<strong>Block user  </strong>
+<strong>6. Block user  </strong>
 ```
 - POST ::  /api/block-user
   
