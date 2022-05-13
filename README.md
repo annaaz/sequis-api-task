@@ -25,8 +25,8 @@ for us to test run the APIs
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Docker [Installation](#installation)
+- [Basic Installation](#installation)
+- [Docker Installation](#installation)
 - [Routes](#routes) and Documentations
 
 ### Basic Installation
@@ -35,7 +35,7 @@ for us to test run the APIs
 ```
 ~/laravel-api$ php artisan migrate
 ```
-### Routes
+### Documentation And Routes
 
 ##### List API 
 <strong>Ask Request </strong>
