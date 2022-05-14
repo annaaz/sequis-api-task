@@ -26,7 +26,7 @@ for us to test run the APIs
 ## Table of Contents
 
 - [Basic Installation](#installation)
-- [Docker Installation](#installation)
+- [Docker Installation](#Docker)
 - [Documentations and Routes](#routes)  
 
 ### Basic Installation
@@ -74,6 +74,13 @@ Please make the database first if you get error like this
 
 and re run {php artisan migrate}
 
+
+### Docker
+
+
+```
+$ Having porblem on setup docker compose , docker desktopn have issue on my windows home edition
+```
 
 ### Routes
 ### Documentation And Routes
