@@ -83,16 +83,17 @@ and re run {php artisan migrate}
 ```
 - POST ::  /api/ask-request
   
-  Handle user request send method via post data body form parameter
+  Handle user request send method via post data body form parameter , In this api user can send request 
+  to our application 
   
   Exception : 
     Validate data  with string required , recognize Mail string , Max character 255
     Check if mail already send request ,
     Check if mail is not blocked
     
-   Form Parameter : 
-   
-   requestor,to
+   Parameter :
+   Form data= requestor
+   Form data= to
    
   
 ```
@@ -115,16 +116,17 @@ and re run {php artisan migrate}
 ```
 - POST ::  /api/manage-request
   
-  Handle user request send method via post data body form parameter
+  Handle user request send method via post data body form parameter , 
+  In this api we can manage listed request wheteher we want to accept or reject it 
   
   Exception : 
     Validate data with string required , recognize Mail string , Max character 255
     Validate if mail exist 
     
-   Form Parameter : 
-   
-   requestor{mail},to{mail}, accept{true or false}
-   
+   Parameter : 
+   Form data = requestor{mail}
+   Form data = to{mail}
+   Form data = accept{true or false}
   
 ```
 <strong>Success Request </strong>
@@ -147,10 +149,9 @@ and re run {php artisan migrate}
     Validate data with string required , recognize Mail string , Max character 255
     Validate if mail exist 
     
-   Form Parameter : 
-
-   request_for{mail}
-  
+   Parameter : 
+   Form data = request_for{mail}
+      
 ```
 <strong>Success Request </strong>
 
@@ -172,9 +173,9 @@ and re run {php artisan migrate}
     Validate data with string required , recognize Mail string , Max character 255
     Validate if mail exist 
     
-   Form Parameter : 
- 
-   email{mail}
+   Parameter : 
+   Form data = email{mail}
+    
   
 ```
 ![image](https://user-images.githubusercontent.com/25476195/168036041-e82c138f-ee73-4dad-aebe-1f8ecac94bcf.png)
@@ -212,7 +213,8 @@ and re run {php artisan migrate}
 ```
 - POST ::  /api/block-user
   
-  Block specified user 
+  Block specified user :
+  This api is for block user so user cannot send anymore request to specified email
   
   Exception : 
     Validate if body json is active
