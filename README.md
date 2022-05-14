@@ -1,4 +1,4 @@
-<p align="center"><img src="https://www.bisnisjakarta.co.id/wp-content/uploads/2017/08/IMG_20170817_170254.jpg"></p>
+<p align="center"><img width='230px' src="https://www.bisnisjakarta.co.id/wp-content/uploads/2017/08/IMG_20170817_170254.jpg"></p>
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 
@@ -25,20 +25,48 @@ for us to test run the APIs
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Docker [Installation](#installation)
-- [Routes](#routes) and Documentations
+- [Basic Installation](#installation)
+- [Docker Installation](#installation)
+- [Documentations and Routes](#routes)  
 
 ### Basic Installation
 
+### Installation
+
 1. Clone repository
+```
+$ git clone https://github.com/annaaz/sequis-api-task.git
+```
+
+2. Install composer dependencies
+```
+~/laravel-api$ composer install
+```
+
+3. Generate APP_KEY
+```
+~/laravel-api$ php artisan key:generate
+```
+
+4. Configure .env file, edit file with next command `$ nano .env`
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=homestead
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+5. Run migrations
 ```
 ~/laravel-api$ php artisan migrate
 ```
 ### Routes
+### Documentation And Routes
 
 ##### List API 
-<strong>Ask Request </strong>
+<strong>1. Handle Ask Request </strong>
 ```
 - POST ::  /api/ask-request
   
@@ -57,20 +85,20 @@ for us to test run the APIs
 ```
 <strong>Success Request </strong>
 
- ![image](https://user-images.githubusercontent.com/25476195/168025622-7a1c5359-5cdd-4378-88b0-bd42abea3e77.png)
+![image](https://user-images.githubusercontent.com/25476195/168025622-7a1c5359-5cdd-4378-88b0-bd42abea3e77.png)
 
- <strong>Failed because requestor mail is blocked</strong>
+<strong>Failed because requestor mail is blocked</strong>
 
- ![image](https://user-images.githubusercontent.com/25476195/168025776-7ca002ef-b068-4432-835d-84d2b5676517.png)
+![image](https://user-images.githubusercontent.com/25476195/168025776-7ca002ef-b068-4432-835d-84d2b5676517.png)
 
- <strong>Failed because already sent request </strong>
- ![image](https://user-images.githubusercontent.com/25476195/168022212-427381cd-4eea-4f32-8596-a9af11f63774.png)
+<strong>Failed because already sent request </strong>
+![image](https://user-images.githubusercontent.com/25476195/168022212-427381cd-4eea-4f32-8596-a9af11f63774.png)
 
- <hr />
+<hr />
 
 
- <strong>Manage Request </strong>
- ```
+<strong>2. Handle Manage Request </strong>
+```
 - POST ::  /api/manage-request
   
   Handle user request send method via post data body form parameter
@@ -85,18 +113,18 @@ for us to test run the APIs
    
   
 ```
- <strong>Success Request </strong>
+<strong>Success Request </strong>
 
- ![image](https://user-images.githubusercontent.com/25476195/168028539-ebffa10c-afed-4f51-9b9a-b7b7b34da498.png) 
+![image](https://user-images.githubusercontent.com/25476195/168028539-ebffa10c-afed-4f51-9b9a-b7b7b34da498.png) 
 
- <strong>Failed mail is not exist  </strong>
+<strong>Failed mail is not exist  </strong>
 
- ![image](https://user-images.githubusercontent.com/25476195/168028752-4c9d880a-cae0-423c-985e-f845b5c4d85c.png)
+![image](https://user-images.githubusercontent.com/25476195/168028752-4c9d880a-cae0-423c-985e-f845b5c4d85c.png)
 
- <hr />
+<hr />
 
- <strong>List All Request </strong>
- ```
+<strong>3.Handle List All Request </strong>
+```
 - POST ::  /api/list-request
   
   Show all requester for user 
@@ -106,31 +134,78 @@ for us to test run the APIs
     Validate if mail exist 
     
    Form Parameter : 
-   
-   requestor{mail},to{mail}, accept{true or false}
-   
+
+   request_for{mail}
   
 ```
- <strong>Success Request </strong>
+<strong>Success Request </strong>
 
- ![image](https://user-images.githubusercontent.com/25476195/168032381-e17bd133-4f0d-4b2e-bd01-693dc70eb339.png)
+![image](https://user-images.githubusercontent.com/25476195/168032381-e17bd133-4f0d-4b2e-bd01-693dc70eb339.png)
 
- <strong>Failed mail is not exist  </strong>
+<strong>Failed mail is not exist  </strong>
 
- ![image](https://user-images.githubusercontent.com/25476195/168035899-1f2277f8-f85c-4f1b-932f-93346d665127.png)
+![image](https://user-images.githubusercontent.com/25476195/168035899-1f2277f8-f85c-4f1b-932f-93346d665127.png)
 
- <hr />
+<hr />
 
-- POST /api/list-friends
+<strong>4. List Friends </strong>
+```
+- POST ::  /api/list-friends
+  
+  Show all friends with emails paramter sent
+  
+  Exception : 
+    Validate data with string required , recognize Mail string , Max character 255
+    Validate if mail exist 
+    
+   Form Parameter : 
+ 
+   email{mail}
+  
+```
 ![image](https://user-images.githubusercontent.com/25476195/168036041-e82c138f-ee73-4dad-aebe-1f8ecac94bcf.png)
 
-- POST /api/retrieve-friends
+<hr />
 
+
+<strong>5. List retrieve between two mails </strong>
+```
+- POST ::  /api/retrieve-friends
+  
+  Show all relatives between two mails with json body parameter
+  
+  Exception : 
+    Validate if body json is active
+    Validate data with string required , recognize Mail string , Max character 255
+    Validate if mail exist 
+    
+   Form Parameter : 
+   email{mail}
+   
+```
 ![image](https://user-images.githubusercontent.com/25476195/168036327-c4d1cf02-c784-4c3d-845e-65fa29b13510.png)
 
 ![image](https://user-images.githubusercontent.com/25476195/168036532-8ea928da-8c9c-4e56-b69d-eb17abde4545.png)
 
-- POST /api/block-user
+<hr />
+
+<strong>6. Block user  </strong>
+```
+- POST ::  /api/block-user
+  
+  Block specified user 
+  
+  Exception : 
+    Validate if body json is active
+    Validate data with string required , recognize Mail string , Max character 255
+    Validate if mail exist 
+    
+   Form Parameter : 
+   
+   email{mail}
+   
+  
+```
 
 ![image](https://user-images.githubusercontent.com/25476195/168036693-3bcc9d34-7864-423d-9617-114ffc7aa306.png)
 
