@@ -38,17 +38,22 @@ for us to test run the APIs
 $ git clone https://github.com/annaaz/sequis-api-task.git
 ```
 
-2. Install composer dependencies
+2. Go to directories
+```
+$ cd sequis-api-task
+```
+
+3. Install composer dependencies
 ```
 ~/laravel-api$ composer install
 ```
 
-3. Generate APP_KEY
+4. Generate APP_KEY
 ```
 ~/laravel-api$ php artisan key:generate
 ```
 
-4. Configure .env file, edit file with next command `$ nano .env`
+5. Configure .env file, edit file with next command `$ nano .env`
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -58,10 +63,18 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-5. Run migrations
+6. Run migrations
 ```
 ~/laravel-api$ php artisan migrate
 ```
+
+Note : 
+Please make the database first if you get error like this
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/25476195/168405490-76879da1-e193-425f-931f-8c60a27e5d48.png">
+
+and re run {php artisan migrate}
+
+
 ### Routes
 ### Documentation And Routes
 
@@ -84,6 +97,7 @@ DB_PASSWORD=
   
 ```
 <strong>Success Request </strong>
+
 
 ![image](https://user-images.githubusercontent.com/25476195/168025622-7a1c5359-5cdd-4378-88b0-bd42abea3e77.png)
 
@@ -179,8 +193,13 @@ DB_PASSWORD=
     Validate data with string required , recognize Mail string , Max character 255
     Validate if mail exist 
     
-   Form Parameter : 
-   email{mail}
+   JSON Parameter : 
+     {
+        "friends": [
+            "mail",
+            "mail"
+        ]
+    }
    
 ```
 ![image](https://user-images.githubusercontent.com/25476195/168036327-c4d1cf02-c784-4c3d-845e-65fa29b13510.png)
